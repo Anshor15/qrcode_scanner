@@ -31,9 +31,8 @@ class _AppState extends State<App> {
               ElevatedButton(
                 onPressed: () async {
                   ScanResult? result = await QRCodeScanner.scan();
-                  var resultJson = jsonDecode(result?.rawContent ?? "{}");
                   setState(() {
-                    this.result = resultJson["value"];
+                    this.result = result?.rawContent;
                   });
                 },
                 child: const Text("Scan"),
