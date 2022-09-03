@@ -1,6 +1,12 @@
 # qrcode_scanner
  custom qr code scanner from packages barcode_scan2
 
+# Use
+
+```dart
+ScanResult? result = await QRCodeScanner.scan();
+```
+
 # Example
 
 ```dart
